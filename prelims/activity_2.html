@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ecmrnn : hello!</title>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet"
+        />
+        <!-- Styles -->
+        <style>
+            *,
+            *::before,
+            *::after {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                transition: all 100ms ease-in-out;
+            }
+
+            :root {
+                --clr-light: hsla(0 0% 98% / 1);
+                --clr-light-75: hsla(0 0% 98% / .75);
+                --clr-dark-100: hsla(0 0% 6% / 1);
+                --clr-dark-25: hsla(0 0% 6% / 0.25);
+                --clr-primary-100: hsla(0 61% 50% / 1);
+                --clr-primary-90: hsla(0 61% 50% / .90);
+                --clr-primary-25: hsla(0 61% 50% / .25);
+            }
+
+            body {
+                font-family: "Arial";
+                height: 100svh;
+                color: var(--clr-dark-100);
+                display: flex;
+                flex-direction: column;
+            }
+
+            h1,
+            h2,
+            h3 {
+                font-family: "Poppins", Arial, "sans-serif";
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            address {
+                display: inline-block;
+            }
+
+            #biographyBody,
+            #skillBody {
+                padding-bottom: 1.25em;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                border: 1px solid var(--clr-dark-25);
+                border-top: 0;
+                border-radius: 0 0 1em 1em;
+            }
+
+            .biography--content,
+            .skill--content {
+                padding: 2.25em;
+                text-align: justify;
+            }
+
+            #biographyHeader {
+                padding: 2.25rem;
+                border: 1px solid var(--clr-dark-25);
+                border-radius: 1em 1em 0 0;
+            }
+
+            #codes {
+                position: absolute;
+                bottom: 5.5em;
+                display: grid;
+                gap: .5em;
+            }
+
+            code {
+                width: max-content;
+                padding: 1em;
+                font-size: .75rem;
+                background-color: var(--clr-light-75);
+                backdrop-filter: blur(.5em);
+                border-radius: 1em;
+                border: 1px solid var(--clr-dark-25);
+            }
+
+            header {
+                padding-right: 5em;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-family: "Poppins";
+                border-bottom: 1px solid var(--clr-dark-25);
+            }
+
+            hr {
+                margin: 1.25em 0 1.25em 0;
+                width: 15%;
+                border: 0;
+                border-bottom: 1px solid var(--clr-dark-100);
+            }
+
+            #profile {
+                background-image: url("https://live.staticflickr.com/65535/53503739101_049cec302e_b.jpg");
+                background-position: bottom;
+                background-size: contain;
+                background-repeat: no-repeat;
+                position: relative;
+            }
+
+            #intro {
+                min-width: 25em;
+                padding: 2.5em;
+                line-height: 1;
+                background-color: var(--clr-primary-90);
+                backdrop-filter: blur(.5em);
+                border: 1px solid var(--clr-dark-25);
+                border-radius: 1em;
+                color: var(--clr-light);
+                position: absolute;
+                top: 2.25em;
+                right: 0;
+            }
+
+            #logo {
+                padding: 2.5em;
+                border-right: 1px solid var(--clr-dark-25);
+            }
+
+            #logo:hover {
+                background-color: var(--clr-primary-100);
+                color: var(--clr-light);
+            }
+
+            main {
+                padding: 6.25em;
+                padding-bottom: 0;
+                display: grid;
+                gap: 2.25em;
+                grid-template-columns: repeat(2, 1fr);
+                flex-grow: 2;
+            }
+
+            mark {
+                background-color: var(--clr-primary-25);
+            }
+
+            nav li {
+                list-style-type: none;
+            }
+
+            nav ul {
+                display: flex;
+            }
+
+            .nav--link {
+                padding: 1.25em;
+                opacity: 0.35;
+            }
+
+            .nav--link:hover {
+                opacity: 1;
+            }
+
+            #skillBody {
+                border: 0;
+                border-radius: 0;
+            }
+
+            #skillHeader {
+                padding: 2.25rem;
+            }
+
+            .skill--content {
+                padding-top: 0;
+            }
+
+            .skill--content ul {
+                padding-left: 1.25em;
+                margin: 1em 0 1em 0;
+            }
+
+            .title {
+                font-family: 'Poppins';
+                font-size: 1.25rem;
+            }
+
+            p {
+                max-width: 40ch;
+            }
+
+            .active {
+                color: var(--clr-primary-100);
+                opacity: 1;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <!-- Logo -->
+            <a href="#" id="logo">ecmrnn.dev</a>
+            <!-- Navigation Links -->
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav--link">home</a></li>
+                    <li><a href="#" class="nav--link active">about</a></li>
+                    <li><a href="#" class="nav--link">contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Left Side : Profile -->
+            <div id="profile">
+                <div id="intro">
+                    <h1>Hi! I am EC,</h1>
+                    <p class="title">Front-End Developer.</p>
+                </div>
+                <div id="codes">
+                    <code>&lt;p&gt; EC says <mark>&quot;hello&quot;</mark> to the world! &lt;/p&gt;</code>
+                    <code>&lt;address&gt; <address>Pililla, Rizal, Philippines</address> &lt;/address&gt;</code>
+                </div>
+            </div>
+            <!-- Right Side : Biography & Skills -->
+            <section id="biographySkils">
+                <div>
+                    <h2 id="biographyHeader">My Biography</h2>
+                    <div id="biographyBody">
+                        <div class="biography--content">
+                            <h3>Education</h3>
+                            <hr>
+                            <p>
+                                I am currently a <em>bachelor</em> at the 
+                                <strong>University of the East - Manila Campus </strong>,
+                                under the program of Bachelor of Science in
+                                Information and Technology.
+                            </p>
+                        </div>
+                        <div class="biography--content">
+                            <h3>More about me!</h3>
+                            <hr>
+                            <p>
+                                In my leisure, I am fond of watching situational
+                                comedies or &quot;sitcoms&quot;. This helps me
+                                destress and clears my mind on everything that
+                                worries me.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 id="skillHeader">What can I do for you?</h2>
+                    <div id="skillBody">
+                        <div class="skill--content">
+                            <h3>Technical Skills</h3>
+                            <hr>
+                            <p>
+                                Recently I have successfully passed my
+                                fundamental certifications on the following <mark> web technologies</mark>.
+                            </p>
+                            <ul type="circle">
+                                <li><strong>Hypertext Markup Language</strong></li><br>
+                                <li><strong>Cascading Style Sheet</strong></li><br>
+                                <li><strong>JavaScript</strong></li>
+                            </ul>
+                        </div>
+                        <div class="skill--content">
+                            <h3>Other Skills</h3>
+                            <hr>
+                            <p>
+                                I also have a good understanding on the basic
+                                concepts and usage of the following tools and
+                                applications.
+                            </p>
+                            <ul type="circle">
+                                <li><strong>Adobe Photoshop</strong></li><br>
+                                <li><strong>Git & GitHub</strong></li><br>
+                                <li><strong>Figma</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hein</title>
+    
+    <link rel="stylesheet" href="assets/styles/app.css">
+    <link rel="stylesheet" href="assets/styles/media.css">
+    <link rel="shortcut icon" href="assets/icons/favicon/favicon_io/favicon.ico" type="image/x-icon">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <!-- Local Style -->
+    <style>
+        .subtitle {
+            max-width: 35ch;
+        }
+
+        .button-next {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(50%, -50%);
+        }
+
+        #hero > div {
+            display: grid;
+            gap: 3.75em;
+        }
+
+        #hero > div:nth-of-type(2) {
+            position: relative;
+            transform: rotate(2deg);
+            transition: all 250ms ease-in-out;
+            border: 1px solid var(--clr-dark-100);
+            border-radius: .75em;
+            filter: grayscale(.3);
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        }
+
+        #hero > div:nth-of-type(2) > p {
+            padding: .5em 1em;
+            position: absolute;
+            top: 2em;
+            left: 2em;
+            background-color: var(--clr-dark-100);
+            color: var(--clr-light);
+            text-transform: uppercase;
+            font-size: .75rem;
+        }
+
+        #hero > div:nth-of-type(2) > p::before {
+            content: 'mouse over here! 👋';
+        }
+
+        #hero > div:nth-of-type(2):hover > p::before {
+            content: 'now click me! 👆';
+        }
+        
+        #hero > div:nth-of-type(2):hover,
+        #hero > div:nth-of-type(2):focus-visible {
+            transform: scale(1.02);
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+        }
+
+        #hein-logo {
+            line-height: .75;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" id="title">Hein</a>
+        <div>
+            <ul>
+                <li><a href="index.html" class="active nav-link">Home</a></li>
+                <li><a href="category.html" class="nav-link">Categories</a></li>
+                <li>
+                    <div id="button-nav">
+                        <a href="" class="icon tooltip rounded" data-title="Cart">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h440q17 0 28.5 11.5T760-320q0 17-11.5 28.5T720-280H280q-45 0-68-39.5t-2-78.5l54-98-144-304H80q-17 0-28.5-11.5T40-840q0-17 11.5-28.5T80-880h65q11 0 21 6t15 17l27 57Zm134 280h280-280Z"/></svg>
+                        </a>
+                        <a href="" class="icon tooltip rounded" data-title="Profile">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-240v-32q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v32q0 33-23.5 56.5T720-160H240q-33 0-56.5-23.5T160-240Zm80 0h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main id="hero">
+        <div>
+            <div>
+                <div class="flex gap-20 items-center">
+                    <p class="font-poppins text-32 text-primary">2024</p>
+                    <svg class="fill-primary" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-40q-17 0-28.5-11.5T80-80q0-17 11.5-28.5T120-120q26 0 51.5-6.5T220-147q9-5 20-5t20 5q23 14 48.5 20.5T360-120q26 0 51.5-6.5T460-147q9-5 20.5-5t19.5 5q23 14 48.5 20.5T600-120q26 0 51.5-6.5T700-147q8-5 20-5t20 5q23 14 48.5 20.5T840-120q17 0 28.5 11.5T880-80q0 17-11.5 28.5T840-40q-31 0-61-7.5T720-70q-29 15-59 22.5T600-40q-31 0-61-7.5T480-70q-29 15-59 22.5T360-40q-31 0-61-7.5T240-70q-29 15-59 22.5T120-40Zm367-520 153 120v154q16 11 31 23t29 23q-21 18-46 29t-54 11q-36 0-67-17t-53-43q-22 26-53 43t-67 17q-10 0-19.5-1.5T322-206q-86-59-144-119t-58-104q0-31 24-41t50-10q29 0 67 8.5t81 24.5l-21-124q-4-20 4.5-39.5T352-642l86-58q-3 0-14.5-2.5t-25.5-5-25.5-5Q361-715 358-715l-80 55q-14 9-30 6t-26-17q-9-14-6-30.5t17-25.5l93-64q7-5 14.5-6.5t15.5.5l206 38q14 2 27 11t22 25l35 62q21 38 56.5 64t80.5 34q16 3 26.5 15t10.5 28q0 17-12 28t-28 9q-66-9-118.5-46T577-621l-90 61Zm-75 44 18 106q27 13 67 34.5t63 35.5v-60L412-516Zm268-224q-33 0-56.5-23.5T600-820q0-33 23.5-56.5T680-900q33 0 56.5 23.5T760-820q0 33-23.5 56.5T680-740Z"/></svg>
+                </div>
+                <h1>
+                    <span class="text-64 text-secondary">Summer</span>
+                    <br>
+                    <span class="text-64 text-primary">Collection</span></h1>
+                <p class="subtitle uppercase">feel the heat with our brand new 2024 summer collection!</p>
+            </div>
+            <a href="category.html" class="button-primary rounded">Explore our products</a>
+        </div>
+        <div>
+            <a href="category.html"><img class="rounded" src="assets/images/cover/cover.jpg" alt="man in glasses"></a>
+            <p></p>
+        </div>
+    </main>
+    <section id="introduction">
+        <div class="flex flex-col gap-40">
+            <div class="flex items-center gap-20">
+                <h2 class="text-primary text-32">Hein's 2024 Summer Collection</h2>
+                <svg class="fill-primary" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-40q-17 0-28.5-11.5T80-80q0-17 11.5-28.5T120-120q26 0 51.5-6.5T220-147q9-5 20-5t20 5q23 14 48.5 20.5T360-120q26 0 51.5-6.5T460-147q9-5 20.5-5t19.5 5q23 14 48.5 20.5T600-120q26 0 51.5-6.5T700-147q8-5 20-5t20 5q23 14 48.5 20.5T840-120q17 0 28.5 11.5T880-80q0 17-11.5 28.5T840-40q-31 0-61-7.5T720-70q-29 15-59 22.5T600-40q-31 0-61-7.5T480-70q-29 15-59 22.5T360-40q-31 0-61-7.5T240-70q-29 15-59 22.5T120-40Zm240-160q-26 0-51.5-10T260-240q14-11 29-23t31-23l-62-119q-9-17-13.5-36t-4.5-39v-160q0-33 23.5-56.5T320-720h120q30 0 58-8t53-25q14-9 31-8.5t28 11.5q12 12 11 28t-14 26q-37 27-79.5 41.5T440-640h-56v140h94q8 0 16 3.5t14 9.5l56 62q65-27 115.5-41t86.5-14q35 0 54.5 13.5T840-429q0 39-54 98.5T638-206q-8 2-18.5 4t-19.5 2q-26 0-52-10t-48-30q-8-8-19.5-9t-19.5 8q-22 20-48 30.5T360-200Zm33-136q16-10 46-27t49-26l-28-31-100 4 33 80Zm227-486 98-98q23 0 27.5 26T704-822q-17 17-42 17t-42-17Zm-300 62q-33 0-56.5-23.5T240-840q0-33 23.5-56.5T320-920q33 0 56.5 23.5T400-840q0 33-23.5 56.5T320-760Z"/></svg>
+            </div>
+            <p class="indent justify">Discover <em>Hein's Casual Summer Collection!</em> Elevate your wardrobe with effortlessly chic pieces designed for the sunny season. From breezy tops to relaxed shorts, our collection offers versatile style for every occasion. Embrace laid-back vibes with Hein and make a statement all summer long.</p>
+            <p class="indent justify">The design of this website is a modern and flat design which embodies simplicity and elegance. It strips away excess, focusing on clean lines, subtle textures, and a restrained color palette to create a sense of harmony and tranquility.</p>
+        </div>
+        <div>
+            <p id="hein-logo" class="text-128 text-secondary uppercase font-poppins">Hein</p>
+            <p class="text-primary uppercase font-poppins">2024  CASUAL SUMMER COLLECTION</p>
+        </div>
+    </section>
+    <footer>
+        <div id="footer-content">
+            <div class="flex gap-80">
+                <h2 class="text-32 text-secondary uppercase">Hein</h2>
+                <nav>
+                    <ul class="flex flex-col gap-20">
+                        <li><a href="index.html" class="active nav-link">Home</a></li>
+                        <li><a href="category.html" class="nav-link">Categories</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="flex gap-80">
+                <h2 class="text-32 text-secondary uppercase">
+                    Reach <br>
+                    Us
+                </h2>
+                <nav>
+                    <ul class="flex flex-col gap-20">
+                        <li class="spacing-2">0968 557 5486</li>
+                        <li class="spacing-2 uppercase">Apparel@hein.com</li>
+                        <li class="spacing-2 uppercase">HEIN ON 
+                            <a class="nav-link" href="https://www.facebook.com" target="_blank">FB</a> / 
+                            <a class="nav-link" href="https://www.x.com" target="_blank">X</a> / 
+                            <a class="nav-link" href="https://www.instagram.com" target="_blank">IG</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="flex gap-80">
+                <h2 class="text-32 text-secondary uppercase">By</h2>
+                <ul class="flex flex-col gap-20">
+                    <li class="spacing-2 uppercase">Emanuelle</li>
+                    <li class="spacing-2 uppercase">Christian</li>
+                    <li class="spacing-2 uppercase">Maranan</li>
+                </ul>
+            </div>
+        </div>
+        <p class="footnote center uppercase">&copy; images from: <cite><a href="https://unsplash.com/" target="_blank">unsplash.com</a></cite> &amp; <cite><a href="https://www.walmart.com/" target="_blank">Walmart.com</a></cite></p>
+    </footer>
+</body>
+</html>

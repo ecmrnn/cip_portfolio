@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maranan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <!-- <script src="assets/js/app.js" defer></script> -->
+    <style>
+        table {
+            table-layout: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid min-vh-100">
+        <main class="row">
+            <section class="col-12 bg-light position-relative d-flex align-items-center justify-content-center"
+                style="min-height: 25svh;">
+                <button class="p-3 btn btn-dark rounded-circle position-fixed top-0 start-0 m-3 m-xl-5" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#Id1" aria-controls="Id1">
+                    <div class="bg-white" style="height: 1px; width: 11px;"></div>
+                    <div class="bg-white my-1" style="height: 1px; width: 11px;"></div>
+                    <div class="bg-white" style="height: 1px; width: 11px;"></div>
+                </button>
+
+                <div class="offcanvas offcanvas-start text-bg-dark" data-bs-scroll="true" tabindex="-1" id="Id1"
+                    aria-labelledby="Enable both scrolling & backdrop">
+                    <div class="offcanvas-header d-flex justify-content-between">
+                        <a href="../index.html" class="nav-link offcanvas-title fs-5 fw-bold"
+                            id="Enable both scrolling & backdrop">
+                            ec.mrnn
+                        </a>
+                        <button type="button" class="btn btn-dark d-block p-0 rounded-circle"
+                            style="width: 40px; height: 40px;" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#fff">
+                                <path
+                                    d="m322.15-293.08-29.07-29.07L450.92-480 293.08-636.85l29.07-29.07L480-508.08l156.85-157.84 29.07 29.07L508.08-480l157.84 157.85-29.07 29.07L480-450.92 322.15-293.08Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <hr class="m-0">
+                    <div class="offcanvas-body">
+                        <nav>
+                            <!-- Lectures -->
+                            <hgroup class="d-flex align-items-center gap-3 mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px" fill="#fff">
+                                    <path
+                                        d="M224.62-200H560v-200h200v-335.38q0-10.77-6.92-17.7-6.93-6.92-17.7-6.92H224.62q-10.77 0-17.7 6.92-6.92 6.93-6.92 17.7v510.76q0 10.77 6.92 17.7 6.93 6.92 17.7 6.92Zm0 40q-26.85 0-45.74-18.88Q160-197.77 160-224.62v-510.76q0-26.85 18.88-45.74Q197.77-800 224.62-800h510.76q26.85 0 45.74 18.88Q800-762.23 800-735.38v346.92L571.54-160H224.62Zm90.76-261.54v-40H480v40H315.38Zm0-158.46v-40h329.24v40H315.38ZM200-200v-560 560Z" />
+                                </svg>
+                                <h6 class="fw-bold m-0 fs-6">Lectures</h6>
+                            </hgroup>
+
+                            <div class="ps-2 text-small">
+                                <span class="nav-active py-1 d-flex gap-1 ps-3 d-block border-start border-white">
+                                    <span class="flex-shrink-0 fw-bold">Lecture 1:</span>
+                                    <span>Intro. to Web Design and Components</span>
+                                </span>
+                                <a href="lecture_2.html"
+                                    class="nav-link py-1 d-flex gap-1 ps-3 d-block border-start border-white">
+                                    <span class="flex-shrink-0 fw-bold">Lecture 2:</span>
+                                    <span>HTML Structures</span>
+                                </a>
+                                <a href="lecture_3.html"
+                                    class="nav-link py-1 d-flex gap-1 ps-3 d-block border-start border-white">
+                                    <span class="flex-shrink-0 fw-bold">Lecture 3:</span>
+                                    <span>Lists and Tables</span>
+                                </a>
+                                <a href="lecture_4.html"
+                                    class="nav-link py-1 d-flex gap-1 ps-3 d-block border-start border-white">
+                                    <span class="flex-shrink-0 fw-bold">Lecture 4:</span>
+                                    <span>Links</span>
+                                </a>
+                                <a href="lecture_5.html"
+                                    class="nav-link py-1 d-flex gap-1 ps-3 d-block border-start border-white">
+                                    <span class="flex-shrink-0 fw-bold">Lecture 5:</span>
+                                    <span>Images</span>
+                                </a>
+                                <a href="lecture_6.html"
+                                    class="nav-link py-1 d-flex gap-1 ps-3 d-block border-start border-white">
+                                    <span class="flex-shrink-0 fw-bold">Lecture 6:</span>
+                                    <span>Forms</span>
+                                </a>
+                                <a href="lecture_7.html"
+                                    class="nav-link py-1 d-flex gap-1 ps-3 d-block border-start border-white">
+                                    <span class="flex-shrink-0 fw-bold">Lecture 7:</span>
+                                    <span>Bootstrap</span>
+                                </a>
+                            </div>
+
+                            <!-- Prelims. -->
+                            <hgroup class="d-flex align-items-center gap-3 my-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px" fill="#fff">
+                                    <path
+                                        d="m384-363.69 28.31-28.54L324.54-480l87-87-28.31-28.54L267.69-480 384-363.69Zm192 0L692.31-480 576-596.31l-28.31 28.54L635.46-480l-87.77 87.77L576-363.69ZM224.62-160q-27.62 0-46.12-18.5Q160-197 160-224.62v-510.76q0-27.62 18.5-46.12Q197-800 224.62-800h510.76q27.62 0 46.12 18.5Q800-763 800-735.38v510.76q0 27.62-18.5 46.12Q763-160 735.38-160H224.62Zm0-40h510.76q9.24 0 16.93-7.69 7.69-7.69 7.69-16.93v-510.76q0-9.24-7.69-16.93-7.69-7.69-16.93-7.69H224.62q-9.24 0-16.93 7.69-7.69 7.69-7.69 16.93v510.76q0 9.24 7.69 16.93 7.69 7.69 16.93 7.69ZM200-760v560-560Z" />
+                                </svg>
+                                <h6 class="fw-bold m-0 fs-6">Prelims.</h6>
+                            </hgroup>
+
+                            <div class="ps-2 text-small">
+                                <a href="../prelims/activity_2.html" target="_blank"
+                                    class="nav-link py-1 d-flex gap-1 ps-3 d-block border-start border-white">
+                                    <span class="flex-shrink-0 fw-bold">Activity 2:</span>
+                                    <span>Tags-Web Developer's Page</span>
+                                    <span class="ms-2"><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                            viewBox="0 -960 960 960" width="20px" fill="#ffffff">
+                                            <path
+                                                d="M291.08-324.92q-64.36 0-109.72-45.42Q136-415.75 136-480.18q0-64.44 45.36-109.67 45.36-45.23 109.72-45.23h109.54q6.8 0 11.4 4.55 4.6 4.55 4.6 11.27t-4.6 11.45q-4.6 4.73-11.4 4.73H290.99q-50.68 0-86.84 36.16Q168-530.77 168-480t36.15 86.92q36.16 36.16 86.84 36.16h109.63q6.8 0 11.4 4.54 4.6 4.55 4.6 11.27 0 6.73-4.6 11.46t-11.4 4.73H291.08ZM372.28-464q-6.78 0-11.53-4.55-4.75-4.54-4.75-11.27 0-6.72 4.59-11.45 4.59-4.73 11.37-4.73h215.76q6.78 0 11.53 4.55 4.75 4.54 4.75 11.27 0 6.72-4.59 11.45-4.59 4.73-11.37 4.73H372.28Zm187.1 139.08q-6.8 0-11.4-4.55-4.6-4.55-4.6-11.27t4.6-11.45q4.6-4.73 11.4-4.73h109.63q50.68 0 86.84-36.16Q792-429.23 792-480t-36.15-86.92q-36.16-36.16-86.84-36.16H559.38q-6.8 0-11.4-4.54-4.6-4.55-4.6-11.27 0-6.73 4.6-11.46t11.4-4.73h109.54q64.36 0 109.72 45.42Q824-544.25 824-479.82q0 64.44-45.36 109.67-45.36 45.23-109.72 45.23H559.38Z" />
+                                        </svg></span>
+                                </a>
+                                <a href="../prelims/activity_3.html"
+                                    class="nav-link py-1 d-flex gap-1 ps-3 d-block border-start border-white">
+                                    <span class="flex-shrink-0 fw-bold">Activity 3:</span>
+                                    <span>Lists-Table of Contents </span>
+                                </a>
+                                <a href="../prelims/activity_4.html"
+                                    class="nav-link py-1 d-flex gap-1 ps-3 d-block border-start border-white">
+                                    <span class="flex-shrink-0 fw-bold">Activity 4:</span>
+                                    <span>Table-Image Gallery</span>
+                                </a>
+                                <a href="../prelims/quiz_1.html"
+                                    class="nav-link py-1 d-flex gap-1 ps-3 d-block border-start border-white">
+                                    <span class="flex-shrink-0 fw-bold">Quiz 1:</span>
+                                    <span>Table with Images</span>
+                                </a>
+                                <a href="../prelims/exam/index.html" target="_blank"
+                                    class="nav-link py-1 d-flex gap-1 ps-3 d-block border-start border-white">
+                                    <span class="flex-shrink-0 fw-bold">Exam:</span>
+                                    <span>Casual Summer Pages</span>
+                                    <span class="ms-2"><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                            viewBox="0 -960 960 960" width="20px" fill="#ffffff">
+                                            <path
+                                                d="M291.08-324.92q-64.36 0-109.72-45.42Q136-415.75 136-480.18q0-64.44 45.36-109.67 45.36-45.23 109.72-45.23h109.54q6.8 0 11.4 4.55 4.6 4.55 4.6 11.27t-4.6 11.45q-4.6 4.73-11.4 4.73H290.99q-50.68 0-86.84 36.16Q168-530.77 168-480t36.15 86.92q36.16 36.16 86.84 36.16h109.63q6.8 0 11.4 4.54 4.6 4.55 4.6 11.27 0 6.73-4.6 11.46t-11.4 4.73H291.08ZM372.28-464q-6.78 0-11.53-4.55-4.75-4.54-4.75-11.27 0-6.72 4.59-11.45 4.59-4.73 11.37-4.73h215.76q6.78 0 11.53 4.55 4.75 4.54 4.75 11.27 0 6.72-4.59 11.45-4.59 4.73-11.37 4.73H372.28Zm187.1 139.08q-6.8 0-11.4-4.55-4.6-4.55-4.6-11.27t4.6-11.45q4.6-4.73 11.4-4.73h109.63q50.68 0 86.84-36.16Q792-429.23 792-480t-36.15-86.92q-36.16-36.16-86.84-36.16H559.38q-6.8 0-11.4-4.54-4.6-4.55-4.6-11.27 0-6.73 4.6-11.46t11.4-4.73h109.54q64.36 0 109.72 45.42Q824-544.25 824-479.82q0 64.44-45.36 109.67-45.36 45.23-109.72 45.23H559.38Z" />
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <!-- Midterms -->
+                            <hgroup class="d-flex align-items-center gap-3 my-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px" fill="#fff">
+                                    <path
+                                        d="m384-363.69 28.31-28.54L324.54-480l87-87-28.31-28.54L267.69-480 384-363.69Zm192 0L692.31-480 576-596.31l-28.31 28.54L635.46-480l-87.77 87.77L576-363.69ZM224.62-160q-27.62 0-46.12-18.5Q160-197 160-224.62v-510.76q0-27.62 18.5-46.12Q197-800 224.62-800h510.76q27.62 0 46.12 18.5Q800-763 800-735.38v510.76q0 27.62-18.5 46.12Q763-160 735.38-160H224.62Zm0-40h510.76q9.24 0 16.93-7.69 7.69-7.69 7.69-16.93v-510.76q0-9.24-7.69-16.93-7.69-7.69-16.93-7.69H224.62q-9.24 0-16.93 7.69-7.69 7.69-7.69 16.93v510.76q0 9.24 7.69 16.93 7.69 7.69 16.93 7.69ZM200-760v560-560Z" />
+                                </svg>
+                                <h6 class="fw-bold m-0 fs-6">Midterms.</h6>
+                            </hgroup>
+
+                            <div class="ps-2 text-small">
+                                <a href="../midterms/activity_1/imagemap.html" target="_blank"
+                                    class="nav-link py-1 d-flex gap-1 ps-3 d-block border-start border-white">
+                                    <span class="flex-shrink-0 fw-bold">Activity 1:</span>
+                                    <span>Image and Links- Image Mapping</span>
+                                    <span class="ms-2"><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                            viewBox="0 -960 960 960" width="20px" fill="#ffffff">
+                                            <path
+                                                d="M291.08-324.92q-64.36 0-109.72-45.42Q136-415.75 136-480.18q0-64.44 45.36-109.67 45.36-45.23 109.72-45.23h109.54q6.8 0 11.4 4.55 4.6 4.55 4.6 11.27t-4.6 11.45q-4.6 4.73-11.4 4.73H290.99q-50.68 0-86.84 36.16Q168-530.77 168-480t36.15 86.92q36.16 36.16 86.84 36.16h109.63q6.8 0 11.4 4.54 4.6 4.55 4.6 11.27 0 6.73-4.6 11.46t-11.4 4.73H291.08ZM372.28-464q-6.78 0-11.53-4.55-4.75-4.54-4.75-11.27 0-6.72 4.59-11.45 4.59-4.73 11.37-4.73h215.76q6.78 0 11.53 4.55 4.75 4.54 4.75 11.27 0 6.72-4.59 11.45-4.59 4.73-11.37 4.73H372.28Zm187.1 139.08q-6.8 0-11.4-4.55-4.6-4.55-4.6-11.27t4.6-11.45q4.6-4.73 11.4-4.73h109.63q50.68 0 86.84-36.16Q792-429.23 792-480t-36.15-86.92q-36.16-36.16-86.84-36.16H559.38q-6.8 0-11.4-4.54-4.6-4.55-4.6-11.27 0-6.73 4.6-11.46t11.4-4.73h109.54q64.36 0 109.72 45.42Q824-544.25 824-479.82q0 64.44-45.36 109.67-45.36 45.23-109.72 45.23H559.38Z" />
+                                        </svg>
+                                    </span>
+                                </a>
+                                <a href="../midterms/quiz_1.html" target="_blank"
+                                    class="nav-link py-1 d-flex gap-1 ps-3 d-block border-start border-white">
+                                    <span class="flex-shrink-0 fw-bold">Quiz 1:</span>
+                                    <span>Forms and CSS- Admission Form </span>
+                                    <span class="ms-2"><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                            viewBox="0 -960 960 960" width="20px" fill="#ffffff">
+                                            <path
+                                                d="M291.08-324.92q-64.36 0-109.72-45.42Q136-415.75 136-480.18q0-64.44 45.36-109.67 45.36-45.23 109.72-45.23h109.54q6.8 0 11.4 4.55 4.6 4.55 4.6 11.27t-4.6 11.45q-4.6 4.73-11.4 4.73H290.99q-50.68 0-86.84 36.16Q168-530.77 168-480t36.15 86.92q36.16 36.16 86.84 36.16h109.63q6.8 0 11.4 4.54 4.6 4.55 4.6 11.27 0 6.73-4.6 11.46t-11.4 4.73H291.08ZM372.28-464q-6.78 0-11.53-4.55-4.75-4.54-4.75-11.27 0-6.72 4.59-11.45 4.59-4.73 11.37-4.73h215.76q6.78 0 11.53 4.55 4.75 4.54 4.75 11.27 0 6.72-4.59 11.45-4.59 4.73-11.37 4.73H372.28Zm187.1 139.08q-6.8 0-11.4-4.55-4.6-4.55-4.6-11.27t4.6-11.45q4.6-4.73 11.4-4.73h109.63q50.68 0 86.84-36.16Q792-429.23 792-480t-36.15-86.92q-36.16-36.16-86.84-36.16H559.38q-6.8 0-11.4-4.54-4.6-4.55-4.6-11.27 0-6.73 4.6-11.46t11.4-4.73h109.54q64.36 0 109.72 45.42Q824-544.25 824-479.82q0 64.44-45.36 109.67-45.36 45.23-109.72 45.23H559.38Z" />
+                                        </svg>
+                                    </span>
+                                </a>
+                                <a href="../midterms/exam/index.html" target="_blank"
+                                    class="nav-link py-1 d-flex gap-1 ps-3 d-block border-start border-white">
+                                    <span class="flex-shrink-0 fw-bold">Exam:</span>
+                                    <span>New Artist Album Proposal</span>
+                                    <span class="ms-2"><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                            viewBox="0 -960 960 960" width="20px" fill="#ffffff">
+                                            <path
+                                                d="M291.08-324.92q-64.36 0-109.72-45.42Q136-415.75 136-480.18q0-64.44 45.36-109.67 45.36-45.23 109.72-45.23h109.54q6.8 0 11.4 4.55 4.6 4.55 4.6 11.27t-4.6 11.45q-4.6 4.73-11.4 4.73H290.99q-50.68 0-86.84 36.16Q168-530.77 168-480t36.15 86.92q36.16 36.16 86.84 36.16h109.63q6.8 0 11.4 4.54 4.6 4.55 4.6 11.27 0 6.73-4.6 11.46t-11.4 4.73H291.08ZM372.28-464q-6.78 0-11.53-4.55-4.75-4.54-4.75-11.27 0-6.72 4.59-11.45 4.59-4.73 11.37-4.73h215.76q6.78 0 11.53 4.55 4.75 4.54 4.75 11.27 0 6.72-4.59 11.45-4.59 4.73-11.37 4.73H372.28Zm187.1 139.08q-6.8 0-11.4-4.55-4.6-4.55-4.6-11.27t4.6-11.45q4.6-4.73 11.4-4.73h109.63q50.68 0 86.84-36.16Q792-429.23 792-480t-36.15-86.92q-36.16-36.16-86.84-36.16H559.38q-6.8 0-11.4-4.54-4.6-4.55-4.6-11.27 0-6.73 4.6-11.46t11.4-4.73h109.54q64.36 0 109.72 45.42Q824-544.25 824-479.82q0 64.44-45.36 109.67-45.36 45.23-109.72 45.23H559.38Z" />
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <!-- Finals -->
+                            <hgroup class="d-flex align-items-center gap-3 my-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px" fill="#fff">
+                                    <path
+                                        d="m384-363.69 28.31-28.54L324.54-480l87-87-28.31-28.54L267.69-480 384-363.69Zm192 0L692.31-480 576-596.31l-28.31 28.54L635.46-480l-87.77 87.77L576-363.69ZM224.62-160q-27.62 0-46.12-18.5Q160-197 160-224.62v-510.76q0-27.62 18.5-46.12Q197-800 224.62-800h510.76q27.62 0 46.12 18.5Q800-763 800-735.38v510.76q0 27.62-18.5 46.12Q763-160 735.38-160H224.62Zm0-40h510.76q9.24 0 16.93-7.69 7.69-7.69 7.69-16.93v-510.76q0-9.24-7.69-16.93-7.69-7.69-16.93-7.69H224.62q-9.24 0-16.93 7.69-7.69 7.69-7.69 16.93v510.76q0 9.24 7.69 16.93 7.69 7.69 16.93 7.69ZM200-760v560-560Z" />
+                                </svg>
+                                <h6 class="fw-bold m-0 fs-6">Finals.</h6>
+                            </hgroup>
+
+                            <div class="ps-2 text-small">
+                                <a href="../finals/activity_2/index.html" target="_blank"
+                                    class="nav-link py-1 d-flex gap-1 ps-3 d-block border-start border-white">
+                                    <span class="flex-shrink-0 fw-bold">Activity 2:</span>
+                                    <span>Bootstrap</span>
+                                    <span class="ms-2"><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                            viewBox="0 -960 960 960" width="20px" fill="#ffffff">
+                                            <path
+                                                d="M291.08-324.92q-64.36 0-109.72-45.42Q136-415.75 136-480.18q0-64.44 45.36-109.67 45.36-45.23 109.72-45.23h109.54q6.8 0 11.4 4.55 4.6 4.55 4.6 11.27t-4.6 11.45q-4.6 4.73-11.4 4.73H290.99q-50.68 0-86.84 36.16Q168-530.77 168-480t36.15 86.92q36.16 36.16 86.84 36.16h109.63q6.8 0 11.4 4.54 4.6 4.55 4.6 11.27 0 6.73-4.6 11.46t-11.4 4.73H291.08ZM372.28-464q-6.78 0-11.53-4.55-4.75-4.54-4.75-11.27 0-6.72 4.59-11.45 4.59-4.73 11.37-4.73h215.76q6.78 0 11.53 4.55 4.75 4.54 4.75 11.27 0 6.72-4.59 11.45-4.59 4.73-11.37 4.73H372.28Zm187.1 139.08q-6.8 0-11.4-4.55-4.6-4.55-4.6-11.27t4.6-11.45q4.6-4.73 11.4-4.73h109.63q50.68 0 86.84-36.16Q792-429.23 792-480t-36.15-86.92q-36.16-36.16-86.84-36.16H559.38q-6.8 0-11.4-4.54-4.6-4.55-4.6-11.27 0-6.73 4.6-11.46t11.4-4.73h109.54q64.36 0 109.72 45.42Q824-544.25 824-479.82q0 64.44-45.36 109.67-45.36 45.23-109.72 45.23H559.38Z" />
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+
+                <hgroup class="text-center">
+                    <h1 class="fw-bold">Lecture #1</h1>
+                    <p class="m-0">Introduction to Web Design and Components</p>
+                </hgroup>
+            </section>
+        </main>
+
+        <!-- Content -->
+        <div class="container my-5">
+            <h2 class="fs-5 mb-3 fw-bold">Preview</h2>
+
+            <div class="content p-5 d-flex flex-column flex-lg-row gap-5 border border-dark rounded">
+                <div class="w-100">
+                    <h3 class="fs-6 fw-bold mb-3">What is HTML?</h3>
+                    <p class="text-justify">Hypertext Markup Language, or HTML, is a markup language used to describe
+                        the appearance, content, or layout of a web page. This means that HTML forms the skeletal
+                        structure of a web page, serving as the most basic building blocks of the web.
+                        <br><br>
+                        According to MDN Web Docs, the term <strong>&quot;Hypertext&quot;</strong> refers to links that
+                        connect one web page to another. This web page may be either a part of the website or an
+                        entirely unrelated web page.
+                    </p>
+                </div>
+                <div class="w-100">
+                    <h3 class="fs-6 fw-bold mb-3">What are elements and attributes? Cite at least 3 of each.</h3>
+                    <p class="text-justify">According to MDN Web Docs, elements are the set of tags that semantically
+                        describe the content between them. The syntax of an opening tag includes the name of an element
+                        enclosed between angle brackets &#40;&lt; and &gt;&#41;. The syntax of a closing tag is similar
+                        to the opening tag, but the name is preceded by a slash symbol &#40;&#47;&#41;.
+                        <br><br>
+                        Attributes, on the other hand, provide the element with additional characteristics that can be
+                        useful when the developer needs better control over the element.
+                    </p>
+
+                    <div class="table-responsive">
+                        <table class="text-small w-100">
+                            <thead>
+                                <tr>
+                                    <th>Element</th>
+                                    <th>Attribute</th>
+                                    <th>Sample Values</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>form</td>
+                                    <td>method</td>
+                                    <td>POST, GET</td>
+                                </tr>
+                                <tr>
+                                    <td>input</td>
+                                    <td>type</td>
+                                    <td>text, number, password</td>
+                                </tr>
+                                <tr>
+                                    <td>a</td>
+                                    <td>href</td>
+                                    <td>www.ue.instructure.com</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-3 d-flex justify-content-between text-small">
+                <div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center gap-2">
+                    <a href="../index.html" class="btn btn-dark text-small">Home</a>
+                    <span>Back to Home</span>
+                </div>
+                <div class="d-flex flex-column-reverse flex-lg-row align-items-end align-items-lg-center gap-2">
+                    <span>HTML Structures</span>
+                    <a href="lecture_2.html" class="btn btn-dark text-small">Lecture 2</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

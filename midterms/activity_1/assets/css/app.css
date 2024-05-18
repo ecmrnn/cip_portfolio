@@ -1,0 +1,12 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+main {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+h1 {
+    line-height: .5;
+}

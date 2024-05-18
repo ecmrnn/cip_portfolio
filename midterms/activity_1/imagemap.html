@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Mapping : Maranan</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+    <main>
+        <div>
+            <h1>Image Mapping</h1>
+            <p>Click on the shape or on one of the shape to watch it closer.</p>
+        
+            <img usemap="#shapes" src="assets/images/shapes.png" alt="shapes" />
+
+            <map name="shapes">
+                <area shape="circle" coords="75, 75, 75" href="circle.html" alt="circle">
+                <area shape="rect" coords="175, 0, 325, 150" href="square.html" alt="circle">
+                <area shape="poly" coords="425, 0, 500, 150, 350, 150" href="triangle.html" alt="circle">
+            </map>
+        </div>
+    </main>
+</body>
+</html>

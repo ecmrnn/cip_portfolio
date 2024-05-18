@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARANAN : Hands on Quiz 1</title>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: rgb(186, 0, 0);
+            border-bottom: 1px solid rgba(0 0 0 / .5);
+            color: white;
+        }
+
+        body {
+            background-color: whitesmoke;
+        }
+
+        #header {
+            margin: 0 auto;
+            padding: 1em 2.5em;
+            max-width: 1250px;
+            display: flex;
+        }
+
+        hgroup {
+            position: absolute;
+            top: 1em;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        h1 {
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        main {
+            margin: 0 auto;
+            padding: 2.5em;
+            max-width: 1250px;
+        }
+
+        legend {
+            padding: .5em 1em;
+            color: white;
+            background-color: rgb(186, 0, 0);
+            border: 1px solid rgba(0 0 0 / .5);
+            border-radius: .25em;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        fieldset {
+            padding: 1em;
+            margin-top: 16px;
+            background-color: white;
+            border: 1px solid rgba(0 0 0 / .5);
+            border-radius: .25em;
+        }
+
+        hgroup {
+            text-align: center;
+        }
+
+        #logo {
+            margin-right: auto;
+            width: 100px;
+            aspect-ratio: 1/1;
+        }
+
+        .group-small {
+            width: max-content;
+            row-gap: .25em;
+            column-gap: 2em;
+        }
+
+        .group-small input {
+            width: 150%;
+        }
+
+        input,
+        select {
+            background-color: white;
+            padding: .5em .5em;
+            border-radius: .25em;
+            border: 1px solid rgba(0 0 0 / .25);
+            text-transform: uppercase;
+        }
+
+        input:hover {
+            border-color: rgba(0 0 0 / .5);
+        }
+
+        input:focus {
+            border-color: transparent;
+        }
+
+        input[type="submit"] {
+            background-color: rgb(186, 0, 0);
+            padding: 1em 2em;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 700;
+            border-radius: .25em;
+        }
+
+        input[type="submit"]:hover {
+            cursor: pointer;
+            background-color: rgb(168, 0, 0);
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            padding: 0;
+            margin-right: 1em;
+        }
+
+
+        input:disabled {
+            border: 1px solid rgba(0 0 0 / .15);
+            cursor: not-allowed;
+        }
+
+        label {
+            text-transform: uppercase;
+            font-size: .75rem;
+            font-weight: 600;
+        }
+
+        #studentName {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr .5fr;
+            gap: .25em;
+        }
+
+        #dataPrivacyLabel {
+            max-width: 50ch;
+            display: block;
+        }
+
+        /* Utilities */
+
+        .mt-16 {
+            margin-top: 1em;
+        }
+
+        .mr-16 {
+            margin-right: 1em;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .grid {
+            display: grid;
+        }
+
+        .grid-col-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .grid-col-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .w-max {
+            width: max-content;
+        }
+
+        .item-start {
+            align-items: start;
+        }
+
+        .gap-16 {
+            gap: 16px;
+        }
+
+        .gap-4 {
+            gap: .25em;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+    </style>
+
+    <script defer>
+        function isWorking() {
+            let working = document.getElementById("working").checked;
+            
+            if (working) {
+                document.getElementById("businessTel").removeAttribute("disabled")
+            } else {
+                document.getElementById("businessTel").setAttribute("disabled", "disabled")
+            }
+        }
+    </script>
+</head>
+<body>
+    <form method="POST" action="">
+        <header>
+            <div id="header">
+                <a id="logo" href="https://www.ue.edu.ph/mla/" target="_blank">
+                    <img id="logo" src="https://upload.wikimedia.org/wikipedia/en/9/9f/University_of_the_East_seal.png" alt="UE Logo">
+                </a>
+                <hgroup>
+                    <div>
+                        <h1>University of the East</h1>
+                        <p>Enrollment System</p>
+                    </div>
+                    <div>
+                        <h2>Personal Data Sheet</h1>
+                        <p>&lpar;Graduate School&rpar;</p>
+                    </div>
+                </hgroup>
+                <div>
+                    <div class="grid grid-col-2 gap-4">
+                        <label for="program" class="text-right">Program</label>
+                        <select name="program" id="program" required>
+                            <option value="">Select a Program</option>
+                            <optgroup label="Computer Science and Studies">
+                                <option title="Information Technology" value="ccss-it">Info. Technology</option>
+                                <option title="Information Systems" value="ccss-is">Info. Systems</option>
+                                <option title="Computer Science" value="ccss-cs">Computer Science</option>
+                                <option title="Data Science" value="ccss-da">Data Science</option>
+                            </optgroup>
+                            <optgroup label="Dentistry">
+                                <option title="Prosthodontics" value="dent-pr">Prosthodontics</option>
+                                <option title="Orthodontics" value="dent-o">Orthodontics</option>
+                                <option title="Periodontics" value="dent-pe">Periodontics</option>
+                                <option title="Endodontics" value="dent-e">Endodontics</option>
+                            </optgroup>
+                            <optgroup label="Engineering">
+                                <option title="Civil Engineering" value="engr-ce">Civil</option>
+                                <option title="Electrical Engineering" value="engr-e">Electrical</option>
+                                <option title="Computer Engineering" value="engr-cme">Computer</option>
+                                <option title="Mechanical Engineering" value="engr-m">Mechanical</option>
+                            </optgroup>
+                            <optgroup label="Accountancy">
+                                <option title="Accountancy" value="Accountancy">Accountancy</option>
+                                <option title="Management Accounting" value="Management Accounting">Man. Accounting</option>
+                                <option title="Business Administration" value="Business Administration">Bus. Administration</option>
+                                <option title="Special Degree Program" value="Special Degree Program">Sp. Degree Program</option>
+                            </optgroup>
+                            <optgroup label="Arts and Sciences">
+                                <option title="Broadcasting" value="Broadcasting">Broadcasting</option>
+                                <option title="International Studies" value="International Studies">Int. Studies</option>
+                                <option title="Political Science" value="Political Science">Political Science</option>
+                                <option title="Legal Management" value="Legal Management">Legal Management</option>
+                                <option title="Psychology" value="Psychology">Psychology</option>
+                                <option title="Medical Biology" value="Medical Biology">Medical Biology</option>
+                                <option title="Ecology Biology" value="Ecology Biology">Ecology & Bio.</option>
+                                <option title="Hospitality Management" value="Hospitality Management">Hospitality Man.</option>
+                            </optgroup>
+                        </select>
+                        <label for="studentNumber" class="text-right">Student Number</label>
+                        <input type="number" name="studentNumber" id="studentNumber" placeholder="Student Number">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Student Details -->
+            <fieldset>
+                <legend>Student Details</legend>
+                
+                <div id="studentName">
+                    <div>
+                        <label for="surname">Surname</label>
+                        <input class="w-full" type="text" name="surname" id="surname" placeholder="ex: Dela Cruz" required>
+                    </div>
+                    <div>
+                        <label for="givenName">Given Name</label>
+                        <input class="w-full" type="text" name="givenName" id="givenName" placeholder="ex: Juan" required>
+                    </div>
+                    <div>
+                        <label for="middleName">Middle Name</label>
+                        <input class="w-full" type="text" name="middleName" id="middleName" placeholder="ex: Maranan" required>
+                    </div>
+                    <div>
+                        <label for="auxName">Auxiliary Name</label>
+                        <input class="w-full" type="text" name="auxName" id="auxName" placeholder="ex: &lpar;Sr., Jr., II, III, etc.&rpar;">
+                    </div>
+                </div>
+
+                <div class="grid grid-col-2 gap-16">
+                    <fieldset class="grid grid-col-2 gap-4">
+                        <label for="cityAddress">City Address</label>
+                        <input type="text" name="cityAddress" id="cityAddress" placeholder="City Address">
+                        <label for="cityZipCode">Zip Code</label>
+                        <input type="number" name="cityZipCode" id="cityZipCode" placeholder="XXXX">
+                    </fieldset>
+                    <fieldset class="grid grid-col-2 gap-4">
+                        <label for="homeAddress">Home Address</label>
+                        <input type="text" name="homeAddress" id="homeAddress" placeholder="Home Address" required>
+                        <label for="homeZipCode">Zip Code </label>
+                        <input type="number" name="homeZipCode" id="homeZipCode" placeholder="XXXX" required>
+                    </fieldset>
+                </div>
+                
+                <fieldset class="grid grid-col-2 gap-16">
+                    <div class="grid grid-col-2 gap-4">
+                        <label for="birthday">Birthday</label>
+                        <input type="date" name="birthday" id="birthday" required>
+                        <label for="birthplace">Birthplace</label>
+                        <input type="text" name="birthplace" id="birthplace" placeholder="Birthplace" required>
+                        <label for="citizenship">Citizenship</label>
+                        <input type="text" name="citizenship" id="citizenship" placeholder="Citizenship" required>
+                        <label for="acrNo">If Alien, ACR# &lpar;see Registrar&rpar;</label>
+                        <input type="number" name="acrNo" id="acrNo" placeholder="ACR #">
+                    </div>
+
+                    <div class="grid grid-col-2 gap-4">
+                        <label for="region">Region</label>
+                        <select name="region" id="region" required>
+                            <option value="regionI">Region I</option>
+                            <option value="regionII">Region II</option>
+                            <option value="regionIII">Region III</option>
+                            <option value="regionIVA">Region IV - A</option>
+                            <option value="regionIVB">Region IV - B</option>
+                            <option value="regionV">Region V</option>
+                            <option value="regionVI">Region VI</option>
+                            <option value="regionVII">Region VII</option>
+                            <option value="regionVIII">Region VIII</option>
+                            <option value="regionIX">Region IX</option>
+                            <option value="regionX">Region X</option>
+                            <option value="regionXI">Region XI</option>
+                            <option value="regionXII">Region XII</option>
+                            <option value="regionXIII">Region XIII</option>
+                            <option value="NCR">NCR</option>
+                            <option value="CAR">CAR</option>
+                            <option value="BARMM">BARMM</option>
+                            <option value="MIMAROPA">MIMAROPA</option>
+                        </select>
+                        <label for="age">Age</label>
+                        <input type="number" name="age" id="age" placeholder="Age" required>
+                        <label for="religion">Religion</label>
+                        <input type="text" name="religion" id="religion" placeholder="Religion" required>
+                        <span>Sex</span>
+                        <div>
+                            <label for="male" class="mr-16">Male</label>
+                            <input type="radio" name="sex" id="male" value="male" required>
+                            <label for="female" class="mr-16">Female</label>
+                            <input type="radio" name="sex" id="female" value="female" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="group-small mt-16 grid grid-col-2 gap-4">
+                    <label for="telNo">Tel. No</label>
+                    <input type="number" name="telNo" id="telNo" placeholder="000-000-0000" required>
+                    <label for="emailAddres">E-mail Address</label>
+                    <input type="email" name="emailAddres" id="emailAddres" placeholder="juandelacruz@mailer.com" required>
+                </div>
+            </fieldset>
+
+            <!-- Legal & Civil Status -->
+            <div class="grid grid-col-2 gap-16">
+                <fieldset class="w-full">
+                    <legend>Legal Status</legend>
+                    <input type="radio" name="legalStatus" id="citizenOfRepublic" value="citizenOfRepublic" required>
+                    <label for="citizenOfRepublic">Citizen of RP</label><br />
+                    <input type="radio" name="legalStatus" id="permanentResident" value="permanentResident" required>
+                    <label for="permanentResident">Permanent Resident</label><br />
+                    <input type="radio" name="legalStatus" id="studentOfRepublic" value="studentOfRepublic" required>
+                    <label for="studentOfRepublic">Person granted permission to enter and remain as a student in RP on a visa for a defined period of time</label><br />
+                    <input type="radio" name="legalStatus" id="childOfRepublic" value="childOfRepublic" required>
+                    <label for="childOfRepublic">Person granted permission to enter and remain as a child or spouse of a worker on a visa for a defined period of time</label><br />
+                    <input type="radio" name="legalStatus" id="otherVisa" value="otherVisa" required>
+                    <label for="otherVisa">Other Visa</label><br />
+                    <input type="radio" name="legalStatus" id="legalStatusUnknown" value="legalStatusUnknown" required>
+                    <label for="legalStatusUnknown">Legal status not known</label>
+                </fieldset>
+                <fieldset class="w-full">
+                    <legend>Civil Status</legend>
+            
+                    <input type="radio" name="civilStatus" id="single" value="single" required>
+                    <label for="single">Single</label><br />
+                    <input type="radio" name="civilStatus" id="married" value="married" required>
+                    <label for="married">Married</label><br />
+                    <input type="radio" name="civilStatus" id="divorced" value="divorced" required>
+                    <label for="divorced">Divorced</label><br />
+                    <input type="radio" name="civilStatus" id="widowed" value="widowed" required>
+                    <label for="widowed">Widowed</label><br />
+                    <input type="radio" name="civilStatus" id="separated" value="separated" required>
+                    <label for="separated">Separated</label><br />
+                    <!-- If working -->
+                    <br />
+                    <div>
+                        <input type="checkbox" onchange="isWorking()" name="working" id="working">
+                        <label for="working">Working</label><br />
+                        <div>
+                            <label for="businessTel" class="mr-16">Office &#47; Business Tel. #</label>
+                            <input disabled type="number" name="businessTel" id="businessTel" placeholder="000-000-0000">
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <!-- Parent's Information -->
+            <div class="flex gap-16">
+
+                <fieldset class="w-full">
+                    <legend>Father's Information</legend>
+
+                    <div class="grid grid-col-2 gap-4">
+                        <label for="fatherSurname">Surname</label>
+                        <input type="text" name="fatherSurname" id="fatherSurname" placeholder="ex: Dela Cruz" required>
+                        <label for="fatherFirstName">First Name</label>
+                        <input type="text" name="fatherFirstName" id="fatherFirstName" placeholder="ex: Juan" required>
+                        <label for="fatherMiddleName">Middle Name</label>
+                        <input type="text" name="fatherMiddleName" id="fatherMiddleName" placeholder="ex: Maranan" required>
+                        <label for="fatherAuxName">Auxiliary Name</label>
+                        <input type="text" name="fatherAuxName" id="fatherAuxName" placeholder="ex: &lpar;Sr., Jr., II, III, etc.&rpar;">
+                        <label for="fatherOccupation">Occupation &#47; Employment</label>
+                        <input type="text" name="fatherOccupation" id="fatherOccupation" placeholder="Occupation &#47; Employment" required>
+                        <label for="fatherEducation">Educational Attainment</label>
+                        <input type="text" name="fatherEducation" id="fatherEducation" placeholder="Educational Attainment" required>
+                    </div>
+                </fieldset>
+
+                <fieldset class="w-full">
+                    <legend>Mother's Information</legend>
+
+                    <div class="grid grid-col-2 gap-4">
+                        <label for="motherSurname">Surname</label>
+                        <input type="text" name="motherSurname" id="motherSurname" placeholder="ex: Dela Cruz" required>
+                        <label for="motherFirstName">First Name</label>
+                        <input type="text" name="motherFirstName" id="motherFirstName" placeholder="ex: Juan" required>
+                        <label for="motherMiddleName">Middle Name</label>
+                        <input type="text" name="motherMiddleName" id="motherMiddleName" placeholder="ex: Maranan" required>
+                        <label for="motherAuxName">Auxiliary Name</label>
+                        <input type="text" name="motherAuxName" id="motherAuxName" placeholder="ex: &lpar;Sr., Jr., II, III, etc.&rpar;">
+                        <label for="motherOccupation">Occupation &#47; Employment</label>
+                        <input type="text" name="motherOccupation" id="motherOccupation" placeholder="Occupation &#47; Employment" required>
+                        <label for="motherEducation">Educational Attainment</label>
+                        <input type="text" name="motherEducation" id="motherEducation" placeholder="Educational Attainment" required>
+                    </div>
+                </fieldset>
+            </div>
+
+            <fieldset>
+                <div class="grid grid-col-2 gap-4 group-small">
+                    <label for="parentAddress">Parent's Address</label>
+                    <input type="text" name="parentAddress" id="parentAddress" placeholder="Parent's Address" required>
+                    <label for="parentZipCode">Zip Code</label>
+                    <input type="number" name="parentZipCode" id="parentZipCode" placeholder="XXXX" required>
+                    <label for="parentTelNo">Parent's Tel. No</label>
+                    <input type="number" name="parentTelNo" id="parentTelNo" placeholder="000-000-0000" required>
+                </div>
+            </fieldset>
+
+
+            <!-- Guardian's Information -->
+            <fieldset>
+                <legend>Guardian's Information &lpar;if applicable&rpar;</legend>
+
+                <div class="grid grid-col-2 gap-16">
+                    <div class="grid grid-col-2 gap-4">
+                        <label for="guardianSurname">Surname</label>
+                        <input type="text" name="guardianSurname" id="guardianSurname" placeholder="ex: Dela Cruz">
+                        <label for="guardianFirstName">First Name</label>
+                        <input type="text" name="guardianFirstName" id="guardianFirstName" placeholder="ex: Juan">
+                        <label for="guardianMiddleName">Middle Name</label>
+                        <input type="text" name="guardianMiddleName" id="guardianMiddleName" placeholder="ex: Maranan">
+                        <label for="guardianAuxName">Auxiliary Name</label>
+                        <input type="text" name="guardianAuxName" id="guardianAuxName" placeholder="ex: &lpar;Sr., Jr., II, III, etc.&rpar;">
+                    </div>
+                    <div class="grid grid-col-2 gap-4">
+                        <label for="guardianOccupation">Occupation &#47; Employment</label>
+                        <input type="text" name="guardianOccupation" id="guardianOccupation" placeholder="Occupation &#47; Employment">
+                        <label for="guardianBusinessTel">Office &#47; Business No.</label>
+                        <input type="number" name="guardianBusinessTel" id="guardianBusinessTel" placeholder="Office &#47; Business No.">
+                        <label for="guardianAddress">Guardian's Address</label>
+                        <input type="text" name="guardianAddress" id="guardianAddress" placeholder="Guardian's Address">
+                        <label for="guardianZipCode">Zip Code</label>
+                        <input type="number" name="guardianZipCode" id="guardianZipCode" placeholder="XXXX">
+                        <label for="guardianTelNo">Tel. No</label>
+                        <input type="number" name="guardianTelNo" id="guardianTelNo" placeholder="000-000-0000">
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="mt-16 flex justify-between item-start">
+                <div class="flex gap-16 item-start">
+                    <input type="checkbox" name="dataPrivacy" id="dataPrivacy" required>
+                    <label id="dataPrivacyLabel" for="dataPrivacy">I agree to the <a href="#tnc">Terms and Conditions</a> and the <a href="#dp">Data Privacy</a> that may apply to the information I have provided on this form.</label>
+                </div>
+                <input type="submit" value="Submit Form">
+            </div>
+
+        </main>
+    </form>
+</body>
+</html>

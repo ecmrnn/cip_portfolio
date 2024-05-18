@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hein</title>
+    
+    <link rel="stylesheet" href="assets/styles/app.css">
+    <link rel="stylesheet" href="assets/styles/media.css">
+    <link rel="shortcut icon" href="assets/icons/favicon/favicon_io/favicon.ico" type="image/x-icon">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="index.html" id="title">Hein</a>
+        <div>
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="category.html" class="active nav-link">Categories</a></li>
+                <li>
+                    <div id="button-nav">
+                        <a href="" class="icon tooltip rounded" data-title="Cart">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h440q17 0 28.5 11.5T760-320q0 17-11.5 28.5T720-280H280q-45 0-68-39.5t-2-78.5l54-98-144-304H80q-17 0-28.5-11.5T40-840q0-17 11.5-28.5T80-880h65q11 0 21 6t15 17l27 57Zm134 280h280-280Z"/></svg>
+                        </a>
+                        <a href="" class="icon tooltip rounded" data-title="Profile">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-240v-32q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v32q0 33-23.5 56.5T720-160H240q-33 0-56.5-23.5T160-240Zm80 0h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main id="description" class="flex flex-col gap-40">
+        <div class="flex items-center">
+            <div class="flex items-center gap-20">
+                <a href="gallery.html" class="icon tooltip" data-title="Back">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="m438-480 164 164q11 11 11 25.5T602-265q-11 11-25.5 11t-25.838-11.338L361-455q-5-5.4-7.5-11.7-2.5-6.3-2.5-13.5t2.5-13.5Q356-500 361-505l189.662-189.662Q562-706 576.5-706q14.5 0 25.5 11t11 25.5q0 14.5-11 25.5L438-480Z"/></svg>
+                </a>
+                <h1 class="text-primary">Description</h1>
+            </div>
+        </div>
+        <div class="flex gap-80">
+            <div id="description-container" class="flex items-center">
+                <img id="description-active" class="rounded border" src="assets/images/shirts/shirt 1 - active.png" alt="">
+                <div id="description-thumbnail" class="flex flex-col">
+                    <button class="rounded border">
+                        <img class="rounded" src="assets/images/shirts/shirt 1 - 1.jpg" alt="">
+                    </button>
+                    <button class="rounded border">
+                        <img class="rounded" src="assets/images/shirts/shirt 1 - 2.jpg" alt="">
+                    </button>
+                    <button class="rounded border">
+                        <img class="rounded" src="assets/images/shirts/shirt 1 - 3.jpg" alt="">
+                    </button>
+                </div>
+            </div>
+            <div>
+                <h2 id="description-title" class="text-32">Abstract Comfy Polo Shirt</h2>
+                <div class="py-10 flex items-center">
+                    <svg class="fill-secondary" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-268 332-155q-11 9-24 8.5t-23-7.5q-10-7-15.5-19t-.5-26l57-185-145-103q-12-8-15-21t1-24q4-11 14-19.5t24-8.5h179l58-192q5-14 15.5-21.5T480-781q12 0 22.5 7.5T518-752l58 192h179q14 0 24 8.5t14 19.5q4 11 1 24t-15 21L634-384l57 185q5 14-.5 26T675-154q-10 7-23 7.5t-24-8.5L480-268Z"/></svg>
+                    <svg class="fill-secondary" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-268 332-155q-11 9-24 8.5t-23-7.5q-10-7-15.5-19t-.5-26l57-185-145-103q-12-8-15-21t1-24q4-11 14-19.5t24-8.5h179l58-192q5-14 15.5-21.5T480-781q12 0 22.5 7.5T518-752l58 192h179q14 0 24 8.5t14 19.5q4 11 1 24t-15 21L634-384l57 185q5 14-.5 26T675-154q-10 7-23 7.5t-24-8.5L480-268Z"/></svg>
+                    <svg class="fill-secondary" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-268 332-155q-11 9-24 8.5t-23-7.5q-10-7-15.5-19t-.5-26l57-185-145-103q-12-8-15-21t1-24q4-11 14-19.5t24-8.5h179l58-192q5-14 15.5-21.5T480-781q12 0 22.5 7.5T518-752l58 192h179q14 0 24 8.5t14 19.5q4 11 1 24t-15 21L634-384l57 185q5 14-.5 26T675-154q-10 7-23 7.5t-24-8.5L480-268Z"/></svg>
+                    <svg class="fill-secondary" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-268 332-155q-11 9-24 8.5t-23-7.5q-10-7-15.5-19t-.5-26l57-185-145-103q-12-8-15-21t1-24q4-11 14-19.5t24-8.5h179l58-192q5-14 15.5-21.5T480-781q12 0 22.5 7.5T518-752l58 192h179q14 0 24 8.5t14 19.5q4 11 1 24t-15 21L634-384l57 185q5 14-.5 26T675-154q-10 7-23 7.5t-24-8.5L480-268Z"/></svg>
+                    <svg class="fill-secondary" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-604v236l96 74-36-122 90-64H518l-38-124Zm0 336L332-155q-11 9-24 8.5t-23-7.5q-10-7-15.5-19t-.5-26l57-185-145-103q-12-8-15-21t1-24q4-11 14-19.5t24-8.5h179l58-192q5-14 15.5-21.5T480-781q12 0 22.5 7.5T518-752l58 192h179q14 0 24 8.5t14 19.5q4 11 1 24t-15 21L634-384l57 185q5 14-.5 26T675-154q-10 7-23 7.5t-24-8.5L480-268Z"/></svg>
+                </div>
+                <form id="description-form" class="flex flex-col" action="" method="post">
+                    <div class="flex flex-col">
+                        <label for="color">Choose a color:</label>
+                        <select class="input bg-white rounded border" name="color" id="color">
+                            <option value="Yellow">Yellow</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Green">Green</option>
+                        </select>
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="color">Pick your size:</label>
+                        <select class="input bg-white rounded border" name="color" id="color">
+                            <option value="XS">XS</option>
+                            <option value="SM">SM</option>
+                            <option value="MD">MD</option>
+                            <option value="LG">LG</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="color">Price:</label>
+                        <input type="text" class="input rounded border" value="Php 699.99" readonly>
+                    </div>
+                    <a href="thankyou.html" class="button-primary rounded">Add to Shopping Bag</a>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="footer-content">
+            <div class="flex gap-80">
+                <h2 class="text-32 text-secondary uppercase">Hein</h2>
+                <nav>
+                    <ul class="flex flex-col gap-20">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="category.html" class="active nav-link">Categories</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="flex gap-80">
+                <h2 class="text-32 text-secondary uppercase">
+                    Reach <br>
+                    Us
+                </h2>
+                <nav>
+                    <ul class="flex flex-col gap-20">
+                        <li class="spacing-2">0968 557 5486</li>
+                        <li class="spacing-2 uppercase">Apparel@hein.com</li>
+                        <li class="spacing-2 uppercase">HEIN ON 
+                            <a class="nav-link" href="https://www.facebook.com" target="_blank">FB</a> / 
+                            <a class="nav-link" href="https://www.x.com" target="_blank">X</a> / 
+                            <a class="nav-link" href="https://www.instagram.com" target="_blank">IG</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="flex gap-80">
+                <h2 class="text-32 text-secondary uppercase">By</h2>
+                <ul class="flex flex-col gap-20">
+                    <li class="spacing-2 uppercase">Emanuelle</li>
+                    <li class="spacing-2 uppercase">Christian</li>
+                    <li class="spacing-2 uppercase">Maranan</li>
+                </ul>
+            </div>
+        </div>
+        <p class="footnote center uppercase">&copy; images from: <cite><a href="https://unsplash.com/" target="_blank">unsplash.com</a></cite> &amp; <cite><a href="https://www.walmart.com/" target="_blank">Walmart.com</a></cite></p>
+    </footer>
+</body>
+</html>

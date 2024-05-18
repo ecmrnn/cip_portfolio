@@ -1,0 +1,42 @@
+@media only screen and (max-width: 1890px) {
+    #galleries {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 1573px) {
+    #introduction,
+    #hero,
+    #description,
+    #category-container,
+    #gallery-container,
+    #footer-content,
+    footer {
+        padding: 7.5em 10em;
+    }
+    #footer-content {
+        flex-direction: column;
+        gap: 5em;
+    }
+    #introduction {
+        flex-direction: column-reverse;
+        gap: 5em;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 1292px) {
+    #introduction,
+    #description,
+    #category-container,
+    #gallery-container,
+    #footer-content,
+    footer {
+        padding: 5em;
+    }
+    #hero {
+        height: auto;
+        gap: 5em;
+        flex-direction: column;
+    }
+}

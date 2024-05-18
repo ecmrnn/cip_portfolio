@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Finals Activity 2 : Maranan</title>
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <script src="assets/js/app.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <span>FitFlex</span>
+            <span>Stay Fit, Stay Flexy!</span>
+        </header>
+
+        <main>
+            <nav>
+                <div
+                    style="
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    ">
+                    <span>Main Menu</span>
+                    <button id="toggleNav">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="24px"
+                            viewBox="0 -960 960 960"
+                            width="24px"
+                            fill="#000000">
+                            <path
+                                d="M160-269.23v-40h640v40H160ZM160-460v-40h640v40H160Zm0-190.77v-40h640v40H160Z" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div id="dropdown" data-dropdown="true">
+                    <hr />
+                    <div>
+                        <ul
+                            style="
+                                list-style-type: none;
+                                display: grid;
+                                gap: 10px;
+                            ">
+                            <li>
+                                <a href="index.html">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        height="24px"
+                                        viewBox="0 -960 960 960"
+                                        width="24px"
+                                        fill="#000000">
+                                        <path
+                                            d="M240-200h147.69v-235.38h184.62V-200H720v-360L480-741.54 240-560v360Zm-40 40v-420l280-211.54L760-580v420H532.31v-235.38H427.69V-160H200Zm280-310.77Z" />
+                                    </svg>
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="contact.html">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        height="24px"
+                                        viewBox="0 -960 960 960"
+                                        width="24px"
+                                        fill="#000000">
+                                        <path
+                                            d="M279.23-120q-32.69 0-55.96-21.65Q200-163.31 200-195.23v-534.15q0-31.08 21.19-54.54t52.27-29.93L624.62-888v584.62l-354.39 76.76q-12.08 2.77-21.15 11.04-9.08 8.27-9.08 20.35 0 15.61 11.69 25.42 11.69 9.81 27.54 9.81H720v-600h40v640H279.23Zm56.15-160.69 249.24-54.39v-503.38l-249.24 52.84v504.93Zm-40 8.31v-504.93l-17.3 3.77q-16.39 3.54-27.23 15.66Q240-745.77 240-729.38v474.69q7.31-4.31 14.73-7.35 7.42-3.04 15.5-4.81l25.15-5.53ZM240-769v514.31V-769Z" />
+                                    </svg>
+                                    <span>Contact us</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="about.html">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        height="24px"
+                                        viewBox="0 -960 960 960"
+                                        width="24px"
+                                        fill="#000000">
+                                        <path
+                                            d="m776-585-27.54-27.54 19.23-20.23q7.69-7.69 7.69-17.31 0-9.61-7.69-17.3L667.38-767.69q-7.69-7.69-17.3-7.69-9.62 0-17.31 7.69l-20.23 19.23L584-777l22.31-23.31q17.61-17.61 43.15-17.11t43.16 18.11l106.69 106.69q17.61 17.62 17.61 42.66 0 25.04-17.61 42.65L776-585ZM353.69-161.69q-17.61 17.61-42.65 17.61t-42.66-17.61L164.77-265.31q-18.39-18.38-18.39-45.73 0-27.34 18.39-45.73L184-376l28.54 28.54-19.46 19.23q-7.7 7.69-7.7 17.31 0 9.61 7.7 17.3l100.54 100.54q7.69 7.7 17.3 7.7 9.62 0 17.31-7.7l19.23-19.46L376-184l-22.31 22.31ZM743-433.85l45.46-45.46q7.69-7.69 7.69-17.69t-7.69-17.69L514.69-788.46q-7.69-7.69-17.69-7.69t-17.69 7.69L433.85-743q-7.7 7.69-7.7 17.31 0 9.61 7.7 17.31l274.53 274.53q7.7 7.7 17.31 7.7 9.62 0 17.31-7.7ZM480.69-171.54l45.46-45.69q7.7-7.69 7.7-17.31 0-9.61-7.7-17.31l-274.3-274.3q-7.7-7.7-17.31-7.7-9.62 0-17.31 7.7l-45.69 45.46q-7.69 7.69-7.69 17.69t7.69 17.69l273.77 273.77q7.69 7.69 17.69 7.69t17.69-7.69Zm-28.31-210.92 125.39-125.16-70.15-70.15-125.16 125.39 69.92 69.92Zm56.08 239.23q-18.38 18.38-45.46 18.38-27.08 0-45.46-18.38L143.23-417.54q-18.38-18.38-18.38-45.46 0-27.08 18.38-45.46l45.46-46.23q18.39-18.39 45.73-18.39 27.35 0 45.73 18.39l73.77 73.77 125.39-125.39-73.77-73.54q-18.39-18.38-18.39-45.84 0-27.46 18.39-45.85l46.23-46.23q18.38-18.38 45.73-18.38 27.35 0 45.73 18.38l274.54 274.54q18.38 18.38 18.38 45.73 0 27.35-18.38 45.73l-46.23 46.23q-18.39 18.39-45.85 18.39t-45.84-18.39l-73.54-73.77-125.39 125.39 73.77 73.77q18.39 18.38 18.39 45.73 0 27.34-18.39 45.73l-46.23 45.46Z" />
+                                    </svg>
+                                    <span>About us</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="subscription.html" class="active">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        height="24px"
+                                        viewBox="0 -960 960 960"
+                                        width="24px"
+                                        fill="#000000">
+                                        <path
+                                            d="M160-456.92v72.3q0 9.24 7.69 16.93 7.69 7.69 16.93 7.69h590.76q9.24 0 16.93-7.69 7.69-7.69 7.69-16.93v-72.3H160ZM184.62-840h590.76q26.85 0 45.74 18.88Q840-802.23 840-775.38v390.76q0 26.85-18.88 45.74Q802.23-320 775.38-320H596.92v170.77L480-207.69l-116.92 58.46V-320H184.62q-26.85 0-45.74-18.88Q120-357.77 120-384.62v-390.76q0-26.85 18.88-45.74Q157.77-840 184.62-840ZM160-543.08h640v-232.3q0-9.24-7.69-16.93-7.69-7.69-16.93-7.69H184.62q-9.24 0-16.93 7.69-7.69 7.69-7.69 16.93v232.3Zm0 158.46V-800h24.62q-9.24 0-16.93 7.69-7.69 7.69-7.69 16.93v390.76q0 9.24 7.69 16.93 7.69 7.69 16.93 7.69H160v-24.62Z" />
+                                    </svg>
+                                    <span>Subscription</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="signin.html">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        height="24px"
+                                        viewBox="0 -960 960 960"
+                                        width="24px"
+                                        fill="#000000">
+                                        <path
+                                            d="M479.23-160v-40h256.15q9.24 0 16.93-7.69 7.69-7.69 7.69-16.93v-510.76q0-9.24-7.69-16.93-7.69-7.69-16.93-7.69H479.23v-40h256.15q27.62 0 46.12 18.5Q800-763 800-735.38v510.76q0 27.62-18.5 46.12Q763-160 735.38-160H479.23Zm-28.46-178.46-28.08-28.77L515.46-460H160v-40h355.46l-92.77-92.77 28.08-28.77L592.31-480 450.77-338.46Z" />
+                                    </svg>
+                                    <span>Sign in</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="content">
+                <p id="title">
+                    <strong>Be a member,</strong>
+                    <span>and be a part of our growing team!</span>
+                </p>
+                <p class="description">
+                    Becoming a FitFlex member will offer you
+                    <strong>discounts</strong> to any of our offered products
+                    and or services.
+                </p>
+
+                <div id="subscriptions">
+                    <section class="subscription">
+                        <p class="plan">Bronze</p>
+                        <p class="price">500.00 Php</p>
+                        <p>Billed Monthly</p>
+                        <br />
+
+                        <button class="primary--button">Get Started</button>
+
+                        <div class="inclusions">
+                            <div class="inclusion">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="24px"
+                                    viewBox="0 -960 960 960"
+                                    width="24px"
+                                    fill="#000000">
+                                    <path
+                                        d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                                </svg>
+                                <p>Gym membership pass</p>
+                            </div>
+                            <div class="inclusion">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="24px"
+                                    viewBox="0 -960 960 960"
+                                    width="24px"
+                                    fill="#000000">
+                                    <path
+                                        d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                                </svg>
+                                <p>Access to all gym facilities</p>
+                            </div>
+                            <div class="inclusion">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="24px"
+                                    viewBox="0 -960 960 960"
+                                    width="24px"
+                                    fill="#000000">
+                                    <path
+                                        d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                                </svg>
+                                <p>Acess to group fitness classes</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="subscription">
+                        <p class="plan">Silver</p>
+                        <p class="price">1,000.00 Php</p>
+                        <p>Billed Monthly</p>
+                        <br />
+
+                        <button class="primary--button">Get Started</button>
+
+                        <div class="inclusions">
+                            <div class="inclusion">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="24px"
+                                    viewBox="0 -960 960 960"
+                                    width="24px"
+                                    fill="#000000">
+                                    <path
+                                        d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                                </svg>
+                                <p>All in Bronze</p>
+                            </div>
+                            <div class="inclusion">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="24px"
+                                    viewBox="0 -960 960 960"
+                                    width="24px"
+                                    fill="#000000">
+                                    <path
+                                        d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                                </svg>
+                                <p>Access to Premium Workshops</p>
+                            </div>
+                            <div class="inclusion">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="24px"
+                                    viewBox="0 -960 960 960"
+                                    width="24px"
+                                    fill="#000000">
+                                    <path
+                                        d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                                </svg>
+                                <p>Personalized assessment</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="subscription">
+                        <p class="plan">Gold</p>
+                        <p class="price">2,000.00 Php</p>
+                        <p>Billed Monthly</p>
+                        <br />
+
+                        <button class="primary--button">Get Started</button>
+
+                        <div class="inclusions">
+                            <div class="inclusion">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="24px"
+                                    viewBox="0 -960 960 960"
+                                    width="24px"
+                                    fill="#000000">
+                                    <path
+                                        d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                                </svg>
+                                <p>All in Silver</p>
+                            </div>
+                            <div class="inclusion">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="24px"
+                                    viewBox="0 -960 960 960"
+                                    width="24px"
+                                    fill="#000000">
+                                    <path
+                                        d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                                </svg>
+                                <p>Training with mentors</p>
+                            </div>
+                            <div class="inclusion">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="24px"
+                                    viewBox="0 -960 960 960"
+                                    width="24px"
+                                    fill="#000000">
+                                    <path
+                                        d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                                </svg>
+                                <p>Personalized nutrition consult</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

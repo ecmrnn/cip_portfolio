@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hein</title>
+    
+    <link rel="stylesheet" href="assets/styles/app.css">
+    <link rel="stylesheet" href="assets/styles/media.css">
+    <link rel="shortcut icon" href="assets/icons/favicon/favicon_io/favicon.ico" type="image/x-icon">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Local Style -->
+    <style>
+        article {
+            width: 100%;
+        }
+        article img {
+            margin: 0 auto;
+        }
+        section {
+            display: flex;
+            gap: 5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" id="title">Hein</a>
+        <div>
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="category.html" class="active nav-link">Categories</a></li>
+                <li>
+                <div id="button-nav">
+                        <a href="" class="icon tooltip rounded" data-title="Cart">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h440q17 0 28.5 11.5T760-320q0 17-11.5 28.5T720-280H280q-45 0-68-39.5t-2-78.5l54-98-144-304H80q-17 0-28.5-11.5T40-840q0-17 11.5-28.5T80-880h65q11 0 21 6t15 17l27 57Zm134 280h280-280Z"/></svg>
+                        </a>
+                        <a href="" class="icon tooltip rounded" data-title="Profile">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-240v-32q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v32q0 33-23.5 56.5T720-160H240q-33 0-56.5-23.5T160-240Zm80 0h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main id="gallery-container" class="flex flex-col gap-40">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center gap-20">
+                <a href="category.html" class="icon tooltip" data-title="Back">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="m438-480 164 164q11 11 11 25.5T602-265q-11 11-25.5 11t-25.838-11.338L361-455q-5-5.4-7.5-11.7-2.5-6.3-2.5-13.5t2.5-13.5Q356-500 361-505l189.662-189.662Q562-706 576.5-706q14.5 0 25.5 11t11 25.5q0 14.5-11 25.5L438-480Z"/></svg>
+                </a>
+                <h1 class="text-primary">Our Polo Shirts</h1>
+            </div>
+            <div class="flex">
+                <input type="search" name="search" id="search" placeholder="Search an item" class="search rounded">
+                <button class="icon--search tooltip rounded" data-title="Search">
+                    <svg class="fill-light" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M380-320q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l224 224q11 11 11 28t-11 28q-11 11-28 11t-28-11L532-372q-30 24-69 38t-83 14Zm0-80q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+                </button>
+            </div>
+        </div>
+        <section>
+            <aside class="flex flex-col gap-10">
+                <div class="bg-white rounded border flex gap-20 items-center">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M440-160q-17 0-28.5-11.5T400-200v-240L168-736q-15-20-4.5-42t36.5-22h560q26 0 36.5 22t-4.5 42L560-440v240q0 17-11.5 28.5T520-160h-80Zm40-308 198-252H282l198 252Zm0 0Z"/></svg>
+                    </div>
+                    <p class="text-12">Choose your own style of fitting</p>
+                </div>
+                <form id="filter" class="p-20 bg-white flex flex-col gap-10 rounded border">
+                    <div class="flex items-center gap-20">
+                        <svg class="fill-primary" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M480-96q-79 0-149-30t-122.5-82.5Q156-261 126-331T96-480q0-80 30.5-149.5t84-122Q264-804 335.5-834T488-864q78 0 146.5 27T754-763q51 47 80.5 110T864-518q0 96-67 163t-163 67h-68q-8 0-14 5t-6 13q0 15 15 25t15 53q0 37-27 66.5T480-96Zm0-384Zm-216 36q25 0 42.5-17.5T324-504q0-25-17.5-42.5T264-564q-25 0-42.5 17.5T204-504q0 25 17.5 42.5T264-444Zm120-144q25 0 42.5-17.5T444-648q0-25-17.5-42.5T384-708q-25 0-42.5 17.5T324-648q0 25 17.5 42.5T384-588Zm192 0q25 0 42.5-17.5T636-648q0-25-17.5-42.5T576-708q-25 0-42.5 17.5T516-648q0 25 17.5 42.5T576-588Zm120 144q25 0 42.5-17.5T756-504q0-25-17.5-42.5T696-564q-25 0-42.5 17.5T636-504q0 25 17.5 42.5T696-444ZM480-168q11 0 17.5-8.5T504-192q0-16-15-28t-15-50q0-38 26.5-64t64.5-26h69q66 0 112-46t46-112q0-115-88.5-194.5T488-792q-134 0-227 91t-93 221q0 130 91 221t221 91Z"/></svg>
+                        <p class="text-primary">Color</p>
+                    </div>
+                    <div class="p-10 flex flex-col gap-10">
+                        <div class="flex gap-10">
+                            <input type="checkbox" name="color" id="Yellow">
+                            <label for="Yellow" class="text-12">Yellow</label>
+                        </div>
+                        <div class="flex gap-10">
+                            <input type="checkbox" name="color" id="Blue">
+                            <label for="Blue" class="text-12">Blue</label>
+                        </div>
+                        <div class="flex gap-10">
+                            <input type="checkbox" name="color" id="Green">
+                            <label for="Green" class="text-12">Green</label>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-20">
+                        <svg class="fill-primary" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M456-96q-29.7 0-50.85-21.15Q384-138.3 384-168v-167H264q-29.7 0-50.85-21.15Q192-377.3 192-407v-265q0-61 42-102.5T336-816h396q15.3 0 25.65 10.35Q768-795.3 768-780v373q0 29.7-21.5 50.85Q725-335 696-335H576v167q0 29.7-21.5 50.85Q533-96 504-96h-48ZM264-552h432v-192h-48v107.737Q648-621 637.711-610.5q-10.29 10.5-25.5 10.5Q597-600 586.5-610.35 576-620.7 576-636v-108h-48v37q0 15.3-10.289 25.65-10.29 10.35-25.5 10.35Q477-671 466.5-681.494 456-691.987 456-707.5V-744H336q-29.7 0-50.85 20.5Q264-703 264-672v120Zm0 145h432v-73H264v73Zm0 0v-73 73Z"/></svg>
+                        <p class="text-primary">Design</p>
+                    </div>
+                    <div class="p-10 flex flex-col gap-10">
+                        <div class="flex gap-10">
+                            <input type="checkbox" name="color" id="Abstract">
+                            <label for="Abstract" class="text-12">Abstract</label>
+                        </div>
+                        <div class="flex gap-10">
+                            <input type="checkbox" name="color" id="Stripes">
+                            <label for="Stripes" class="text-12">Stripes</label>
+                        </div>
+                        <div class="flex gap-10">
+                            <input type="checkbox" name="color" id="Nature">
+                            <label for="Nature" class="text-12">Nature</label>
+                        </div>
+                        <div class="flex gap-10">
+                            <input type="checkbox" name="color" id="Classic">
+                            <label for="Classic" class="text-12">Classic</label>
+                        </div>
+                    </div>
+                </form>
+            </aside>
+            <article>
+                <div id="galleries">
+                    <a href="description.html" class="gallery-image rounded border bg-white">
+                        <img class="rounded" src="assets/images/shirts/shirt 1.jpg" alt="Abstract Comfy Polo Shirt">
+                        <div class="p-20">
+                            <p class="gallery-title">Abstract Comfy Polo Shirt</p>
+                            <p class="gallery-price">Php 699.99</p>
+                            <div class="text-12 flex justify-between opacity-50">
+                                <p>5,786 sold</p>
+                                <p>By Ec Maranan</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="description.html" class="gallery-image rounded border bg-white">
+                        <img class="rounded" src="assets/images/shirts/shirt 2.jpg" alt="Striped Blue Polo Shirt">
+                        <div class="p-20">
+                            <p class="gallery-title">Striped Blue Polo Shirt</p>
+                            <p class="gallery-price">Php 599.99</p>
+                            <div class="text-12 flex justify-between opacity-50">
+                                <p>4,559 sold</p>
+                                <p>By Paulo Balugay</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="description.html" class="gallery-image rounded border bg-white">
+                        <img class="rounded" src="assets/images/shirts/shirt 3.jpg" alt="Beach Polo Shirt">
+                        <div class="p-20">
+                            <p class="gallery-title">Beach Polo Shirt</p>
+                            <p class="gallery-price">Php 599.99</p>
+                            <div class="text-12 flex justify-between opacity-50">
+                                <p>4,253 sold</p>
+                                <p>By Rizztoper Castillo</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="description.html" class="gallery-image rounded border bg-white">
+                        <img class="rounded" src="assets/images/shirts/shirt 4.jpg" alt="Under the Sea Polo Shirt">
+                        <div class="p-20">
+                            <p class="gallery-title">Under the Sea Polo Shirt</p>
+                            <p class="gallery-price">Php 499.99</p>
+                            <div class="text-12 flex justify-between opacity-50">
+                                <p>3,827 sold</p>
+                                <p>By Jam Paul Marcelino</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="description.html" class="gallery-image rounded border bg-white">
+                        <img class="rounded" src="assets/images/shirts/shirt 5.jpg" alt="Blue Toned Beach Polo Shirt">
+                        <div class="p-20">
+                            <p class="gallery-title">Blue Toned Beach Polo Shirt</p>
+                            <p class="gallery-price">Php 499.99</p>
+                            <div class="text-12 flex justify-between opacity-50">
+                                <p>2,590 sold</p>
+                                <p>By Hams Barbilledo</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="description.html" class="gallery-image rounded border bg-white">
+                        <img class="rounded" src="assets/images/shirts/shirt 6.png" alt="Black and White Polo Shirt">
+                        <div class="p-20">
+                            <p class="gallery-title">Black and White Polo Shirt</p>
+                            <p class="gallery-price">Php 499.99</p>
+                            <div class="text-12 flex justify-between opacity-50">
+                                <p>2,128 sold</p>
+                                <p>By Raphale Abacs</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div id="pagination" class="flex gap-40">
+                    <button class="button-next text-12 icon rounded tooltip" data-title="Previous">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="m438-480 164 164q11 11 11 25.5T602-265q-11 11-25.5 11t-25.838-11.338L361-455q-5-5.4-7.5-11.7-2.5-6.3-2.5-13.5t2.5-13.5Q356-500 361-505l189.662-189.662Q562-706 576.5-706q14.5 0 25.5 11t11 25.5q0 14.5-11 25.5L438-480Z"/></svg>
+                    </button>
+                    <div class="flex">
+                        <a href="#" class="pages text-12 rounded active">1</a>
+                        <a href="#" class="pages text-12 rounded">2</a>
+                        <a href="#" class="pages text-12 rounded">3</a>
+                    </div>
+                    <button class="button-next text-12 icon rounded tooltip" data-title="Next">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M522-480 358-644q-11-11-11-25.5t11-25.5q11-11 25.5-11t25.838 11.338L599-505q5 5.4 7.5 11.7 2.5 6.3 2.5 13.5t-2.5 13.5Q604-460 599-455L409.338-265.338Q398-254 384-254.5q-14-.5-25-11.5t-11-25.5q0-14.5 11-25.5l163-163Z"/></svg>
+                    </button>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div id="footer-content">
+            <div class="flex gap-80">
+                <h2 class="text-32 text-secondary uppercase">Hein</h2>
+                <nav>
+                    <ul class="flex flex-col gap-20">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="category.html" class="active nav-link">Categories</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="flex gap-80">
+                <h2 class="text-32 text-secondary uppercase">
+                    Reach <br>
+                    Us
+                </h2>
+                <nav>
+                    <ul class="flex flex-col gap-20">
+                        <li class="spacing-2">0968 557 5486</li>
+                        <li class="spacing-2 uppercase">Apparel@hein.com</li>
+                        <li class="spacing-2 uppercase">HEIN ON 
+                            <a class="nav-link" href="https://www.facebook.com" target="_blank">FB</a> / 
+                            <a class="nav-link" href="https://www.x.com" target="_blank">X</a> / 
+                            <a class="nav-link" href="https://www.instagram.com" target="_blank">IG</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="flex gap-80">
+                <h2 class="text-32 text-secondary uppercase">By</h2>
+                <ul class="flex flex-col gap-20">
+                    <li class="spacing-2 uppercase">Emanuelle</li>
+                    <li class="spacing-2 uppercase">Christian</li>
+                    <li class="spacing-2 uppercase">Maranan</li>
+                </ul>
+            </div>
+        </div>
+        <p class="footnote center uppercase">&copy; images from: <cite><a href="https://unsplash.com/" target="_blank">unsplash.com</a></cite> &amp; <cite><a href="https://www.walmart.com/" target="_blank">Walmart.com</a></cite></p>
+    </footer>
+</body>
+</html>
